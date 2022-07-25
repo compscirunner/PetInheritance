@@ -1,6 +1,6 @@
 import java.io.InputStreamReader;
 import java.util.Scanner;
-
+//Hi David! -From Thomas
 public class App {
 	
 	private Scanner input;
@@ -8,14 +8,15 @@ public class App {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		App myApp = new App();
+		
+		App myApp = new App(); //Hello World
 		myApp.gameLoop();
 	}
 	public void gameLoop() {
 		System.out.println("Welcome to Virtual Pet Game");
 		input = new Scanner(System.in);
 		myShelter = new Shelter();
+		// Hi From Mario 
 		
 		
 		while(myShelter.allPetsAlive()) {
@@ -37,13 +38,19 @@ public class App {
 			case 2:
 				addPet();
 				break;
-			}	
 			
+			case 3:
+				myShelter.feedAllOrganicPets();
+				break;	
+			}
+			myShelter.tickAllPets();
 		}
 	}
 	public void showMainMenu() {
 		System.out.println("Press 1. To adopt a pet");
 		System.out.println("Press 2. To admit a pet");
+		System.out.println("Press 3. To feed organic pets");
+		System.out.println("Press 5. To exit");
 	}
 	public void addPet() {
 		System.out.println("Enter the name of the pet you wish to admit");

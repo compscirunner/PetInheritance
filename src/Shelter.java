@@ -30,6 +30,19 @@ public class Shelter {
 		VirtualPet petToRemove = findPetByName(name);
 		pets.remove(petToRemove);
 	}
+
+	public void feedAllOrganicPets() {
+		for(VirtualPet pet:pets) {
+			if(pet instanceof Organic) {
+				((Organic) pet).giveFood();
+			}
+		}
+	}
+	public void tickAllPets(){
+		for(VirtualPet pet:pets) {
+			pet.tick();
+		}
+	}
 	
 	private VirtualPet findPetByName(String name) throws Exception {
 		for(VirtualPet pet: pets) {

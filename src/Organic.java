@@ -30,6 +30,17 @@ public abstract class Organic extends VirtualPet {
 		thirstLevel = 0;
 	}
 
+	
+
+
+
+	@Override
+	public void tick() {
+		hungerLevel++;
+		thirstLevel++;
+		boredomLevel++;
+	}
+
 
 
 

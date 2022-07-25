@@ -30,6 +30,14 @@ public abstract class Robotic extends VirtualPet {
 				+ " -battery level: " + batteryLevel 
 				+ " -durability: " + durability;
 	}
+
+
+	@Override
+	public void tick() {
+		batteryLevel--;
+		durability--;
+	}
+	
 	
 	
 }
